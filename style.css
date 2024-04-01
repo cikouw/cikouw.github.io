@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "caveat";
+    src: url(Caveat-Regular.ttf);
+}
+
+:root {
+    --primary-color: #1877f2;
+    --secondary-color: #00a884;
+    --tertiary-color: #161823;
+    --text-color: rgb(77, 77, 77);
+    --background-color: #e4e6eb;
+    --hijau-cerah: #25d366;
+
+}
+
+body {
+    background-color: #F0F2F5;
+    width: 100%;
+    height: 1000px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.head {
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.head .logoKopline a {
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: "caveat";
+    color: black;
+    cursor: pointer;
+}
+.head .assetKopline img {
+    line-height: 40px;
+    width: 24px;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main-content {
+    width: 100%;
+}
+.main-content .content {
+    display: none;
+}
+.main-content .content.on-tab {
+    display: block;
+}
+.main-content .content h4 {
+    margin: 50px;
+    color: purple;
+}
+
+.main-content .content .container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding: 10px 5px;
+    background-color: white;
+
+}
+.container .menu {
+    padding: 7px 10px;
+    border: 1px solid #777;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 20px;
+    color: #050505;
+    cursor: pointer;
+}
+.container .menu.aktif {
+    background-color: black;
+    color: white;
+}
+
+.main-content .content .content-menu {
+    padding: 10px;
+    display: none;
+}
+.main-content .content .content-menu.aktif {
+    display: block;
+}
+
+.main-content .content .content-menu 
+.menu-tambah h1 {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main-content .content .content-menu 
+.menu-tambah p {
+    font-size: 11px;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(255, 0, 0);
+}
+
+.main-content .content .content-menu 
+.menu-tambah .form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.main-content .content .content-menu 
+.menu-tambah .form input {
+    padding: 13px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+}
+
+.main-content .content .content-menu 
+.menu-tambah .form #button {
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menu-nasabah:hover {
+    background-color: white;
+    border-radius: 5px;
+}
+.nasabah2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.nasabah2 .container2 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.nasabah2 .container2 .foto-profil2 img {
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nasabah2 .container2 .pelanggan2 {
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+.nasabah2 .container2 .pelanggan2 .nama2 {
+    text-decoration: none;
+    font-size: .9rem;
+    color: #050505;
+}
+.nasabah2 .container2 .pelanggan2 .alamat2 {
+    text-decoration: none;
+    font-size: .7rem;
+    color: #7e7e7e;
+    
+}
+.nasabah2 .container2 .pelanggan2 .tanggal2 {
+    color: purple;
+    font-size: 9px;
+    
+}
+
+
+.nasabah2 .target2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nasabah2 .target2 .angsuran2 {
+    color: white;
+    background-color: #050505;
+    border-radius: 20px;
+    font-size: 1rem;
+    letter-spacing: .5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+/* .nasabah2 .target2 .angsuran2:hover {
+    color: #000;
+    background-color: #25d366;
+} */
+.nasabah2 .target2 .sobekan2 {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #ffffff;
+    background-color: #050505;
+    font-weight: 600;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .2s;
+}
+/* .nasabah2 .target2 .sobekan2:hover {
+    color: #050505;
+    background-color: #ffffff;
+} */
+
+
+.content-item {
+    width: 100%;
+    height: 100px;
+    background-color: white ;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:    'target libur baru'    'storting murni drop'    ;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+}
+.item {
+    overflow: hidden;
+}
+.target { grid-area:  target; }
+.target .p1-target {
+    text-align: start;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #050505;
+}
+.target .p2-target {
+    text-align: start;
+    font-size: 12px;
+    font-weight: 600;
+    color: purple;
+}
+
+
+.libur { grid-area:  libur; }
+.libur .p1-libur {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #050505;
+}
+.libur .p2-libur {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: red;
+}
+
+.baru { grid-area:  baru; }
+.baru .p1-baru {
+    text-align: end;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #050505;
+}
+.baru .p2-baru {
+    text-align: end;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0866FF
+}
+
+.storting{ grid-area:  storting; }
+.storting .p1-storting{
+    text-align: start;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #050505;
+}
+.storting .p2-storting{
+    text-align: start;
+    font-size: 12px;
+    font-weight: 600;
+    color: purple;
+}
+
+.murni {
+    grid-area:  murni;
+}
+.murni .p1-murni {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #050505;
+}
+.murni .p2-murni {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.drop {
+    grid-area:  drop;
+    
+}
+.drop .p1-drop {
+    text-align: end;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #050505;
+}
+.drop .p2-drop {
+    text-align: end;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+
+
+.footer {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    
+}
+.footer .btn-click {
+    padding: 0 15px;
+    line-height: 57px;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+}
+.footer .btn-click.warna {
+    color: #050505;
+    font-weight: 600;
+    border-top: 3px solid #050505;
+}
