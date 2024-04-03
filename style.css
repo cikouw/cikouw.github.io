@@ -16,6 +16,9 @@
     --text-color: rgb(77, 77, 77);
     --background-color: #e4e6eb;
     --hijau-cerah: #25d366;
+    --hunmerah :#EC255A;
+    --hunputih: #FAEDF0;
+
 
 }
 
@@ -28,20 +31,21 @@ body {
 
 .head {
     width: 100%;
-    height: 40px;
+    height: 50px;
+    /* background-color: var(--hunmerah); */
     background-color: white;
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    /* border-bottom: 1px solid rgba(0,0,0,0.2); */
 }
 .head .logoKopline a {
     line-height: 40px;
     text-decoration: none;
     font-size: 2rem;
     font-family: "caveat";
-    color: black;
+    color: var(--hunmerah);
     cursor: pointer;
 }
 .head .assetKopline img {
@@ -67,32 +71,32 @@ body {
 }
 
 .main-content .content .container {
+    height:50px;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid rgba(0,0,0,0.2);
-    padding: 10px 5px;
     background-color: white;
 
 }
 .container .menu {
     padding: 7px 10px;
-    border: 1px solid #777;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
     border-radius: 20px;
-    color: #050505;
+    background-color: #F0F2F5;
+    color: var(--tertiary-color);
+    font-weight: 600;
     cursor: pointer;
 }
+
 .container .menu.aktif {
-    background-color: black;
-    color: white;
+    background-color: var(--hunmerah);
+    color: #F0F2F5;
 }
 
 .main-content .content .content-menu {
-    padding: 10px;
     display: none;
 }
 .main-content .content .content-menu.aktif {
@@ -104,7 +108,7 @@ body {
     font-size: 16px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .main-content .content .content-menu 
@@ -117,6 +121,7 @@ body {
 
 .main-content .content .content-menu 
 .menu-tambah .form {
+    padding: 5px 10px;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -143,9 +148,15 @@ body {
     cursor: pointer;
 }
 
+.menu-nasabah {
+    width: 100%;
+    padding: 7px 3px;
+}
+
 .menu-nasabah:hover {
     background-color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
 .nasabah2 {
     display: flex;
@@ -174,61 +185,49 @@ body {
     flex-direction: column;
 }
 .nasabah2 .container2 .pelanggan2 .nama2 {
-    text-decoration: none;
-    font-size: .9rem;
-    color: #050505;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--tertiary-color);
 }
 .nasabah2 .container2 .pelanggan2 .alamat2 {
-    text-decoration: none;
     font-size: .7rem;
-    color: #7e7e7e;
+    color: var(--tertiary-color);
     
 }
 .nasabah2 .container2 .pelanggan2 .tanggal2 {
-    color: purple;
-    font-size: 9px;
-    
+    font-size: .5rem;
+    color: var(--secondary-color);
 }
 
 
 .nasabah2 .target2 {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 7px;
 }
 
 .nasabah2 .target2 .angsuran2 {
-    color: white;
-    background-color: #050505;
-    border-radius: 20px;
-    font-size: 1rem;
-    letter-spacing: .5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: .2s;
-}
-/* .nasabah2 .target2 .angsuran2:hover {
-    color: #000;
-    background-color: #25d366;
-} */
-.nasabah2 .target2 .sobekan2 {
-    width: 35px;
-    height: 35px;
+    width: 65px;
+    height: 20px;
+    line-height: 20px;
+    color: #F0F2F5;
+    background-color: #A74D92;
+    border-radius: 3px;
+    font-size: .7rem;
+    font-weight: 600;
     text-align: center;
-    line-height: 35px;
-    color: #ffffff;
-    background-color: #050505;
+}
+.nasabah2 .target2 .sobekan2 {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background-color: var(--tertiary-color);
+    color: #F0F2F5;
     font-weight: 600;
     border-radius: 50%;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: .2s;
+    font-size: .7rem;
 }
-/* .nasabah2 .target2 .sobekan2:hover {
-    color: #050505;
-    background-color: #ffffff;
-} */
-
 
 .content-item {
     width: 100%;
@@ -345,26 +344,38 @@ body {
 
 .footer {
     width: 100%;
-    height: 60px;
+    height: 75px;
     position: fixed;
     left: 0;
     bottom: 0;
     background-color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border-top: 1px solid rgba(0,0,0,0.2);
+    text-align: center;
     
 }
 .footer .btn-click {
-    padding: 0 15px;
-    line-height: 57px;
-    color: #555;
-    font-size: 16px;
+    
+    padding: 5px 10px;
+    fill: white;
+    stroke: #050505;
+    color: #050505;
+    font-size: 14px;
     cursor: pointer;
 }
+.footer .btn-click:hover {
+    background-color: #F0F2F5;
+    border-radius: 10px;
+}
+.svgSatu {
+    width: 34px;
+    height: 34px;
+}
 .footer .btn-click.warna {
-    color: #050505;
+    fill: var(--hunmerah);
+    color: var(--hunmerah);
+    stroke: var(--hunmerah);
     font-weight: 600;
-    border-top: 3px solid #050505;
 }

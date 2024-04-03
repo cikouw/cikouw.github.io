@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const tabs = document.querySelectorAll(".footer .btn-click");
   const contents = document.querySelectorAll(".content");
