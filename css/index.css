@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 @font-face {
@@ -82,7 +83,7 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.wrapperPage .headerHome .logoWeb p {
+.wrapperPage .headerHome .logoWeb a {
   color: #ff006e;
   line-height: 50px;
   text-decoration: none;

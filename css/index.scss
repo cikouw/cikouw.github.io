@@ -8,6 +8,7 @@ $backgroundColor: #F0F2F5;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 // Font
@@ -95,7 +96,7 @@ body {
             align-items: center;
             cursor: pointer;
 
-            p {
+            a {
                 color: $primaryColor;
                 line-height: 50px;
                 text-decoration: none;
