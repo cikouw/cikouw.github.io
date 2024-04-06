@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "logofont";
+  src: url("/asset/Merienda-Regular.ttf");
+}
+@font-face {
+  font-family: "angkafont";
+  src: url("/asset/RedditMono-Regular.ttf");
+}
+body {
+  background-color: #F0F2F5;
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sectionUtama {
+  background-color: #ffffff;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.sectionUtama .tombolUtama {
+  padding: 5px 10px;
+  color: #919599;
+  stroke: #919599;
+  fill: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sectionUtama .tombolUtama:hover {
+  background-color: #F0F2F5;
+  border-radius: 10px;
+}
+.sectionUtama .tombolUtama .svgUtama {
+  width: 24px;
+}
+
+.tombolUtama.warna {
+  fill: #ff006e;
+  color: #ff006e;
+  stroke: none;
+}
+
+.wrapperPage.onTab {
+  display: block;
+}
+
+.wrapperPage {
+  width: 100%;
+  display: none;
+}
+.wrapperPage .contentPage {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.wrapperPage .headerHome {
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.wrapperPage .headerHome .logoWeb {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.wrapperPage .headerHome .logoWeb p {
+  color: #ff006e;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "logofont";
+}
+.wrapperPage .headerHome svg {
+  border: 1.2px solid #ff006e;
+  border-radius: 50%;
+}
+.wrapperPage .headerHome .saldoKantor {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.wrapperPage .headerHome .saldoKantor .judulSaldo {
+  background-color: #ff006e;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+}
+.wrapperPage .headerHome .saldoKantor .judulSaldo svg {
+  fill: #fff;
+}
+.wrapperPage .headerHome .saldoKantor .angkaSaldo {
+  cursor: pointer;
+}
+.wrapperPage .headerHome .saldoKantor .angkaSaldo p {
+  color: #1877f2;
+  font-family: "angkafont";
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.wrapperPage .homePage {
+  background-color: #ffffff;
+  width: 100%;
+  height: 200px;
+  padding: 0 10px;
+  background-image: url("/asset/homesvg.svg");
+  background-size: cover;
+  position: sticky;
+  top: 0;
+}
+.wrapperPage .homePage .kotakHome {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapperPage .homePage .kotakHome .absensi {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 3px 5px;
+  border: 1px solid #1877f2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.wrapperPage .homePage .kotakHome .absensi p {
+  color: #1877f2;
+  font-size: 10px;
+  font-weight: 600;
+}
+.wrapperPage .homePage .kotakHome .karyawan {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 3px 5px;
+  border: 1px solid #1877f2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.wrapperPage .homePage .kotakHome .karyawan p {
+  color: #1877f2;
+  font-size: 10px;
+  font-weight: 600;
+}
+.wrapperPage .homePage .kotakHome .teman {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 3px 5px;
+  border: 1px solid #1877f2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.wrapperPage .homePage .kotakHome .teman p {
+  color: #1877f2;
+  font-size: 10px;
+  font-weight: 600;
+}
+.wrapperPage .headerRuangkerja {
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapperPage .headerRuangkerja .judul p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.wrapperPage .headerRuangkerja .iconRuangkerja {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.wrapperPage .containerMenu {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid #1877f2;
+  border-radius: 20px;
+  background-color: #ffffff;
+  height: 32px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.wrapperPage .containerMenu .tombolMenu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.wrapperPage .containerMenu .tombolMenu:hover {
+  background-color: #F0F2F5;
+  transition: all 0.2s ease;
+  border-radius: 20px;
+}
+.wrapperPage .containerMenu .tombolMenu.onSlide {
+  color: #ffffff;
+  background-color: #1877f2;
+}
+
+.contentMenuPage {
+  background-color: #1877f2;
+}
+
+.menuDrop {
+  padding: 10px;
+  text-align: center;
+}
+
+.menuDrop p {
+  font-size: 11px;
+  text-align: center;
+  font-weight: 600;
+  color: #919599;
+}
+
+.menuDrop .form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.menuDrop .form input {
+  padding: 13px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+.menuDrop .form #button {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #ff006e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.contentHeader4 {
+  width: 100%;
+  height: 300px;
+  background-image: url(/asset/ivan.jpg);
+  background-size: cover;
+}
+
+.contentHeader5 {
+  width: 100%;
+  height: 300px;
+  background-image: url(/asset/aku.png);
+  background-size: cover;
+}/*# sourceMappingURL=index.css.map */
