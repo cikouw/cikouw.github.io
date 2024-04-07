@@ -1,333 +1,305 @@
 // Definisi Variabel
 $primaryColor: #ff006e;
 $secondaryColor: #1877f2;
-$backgroundColor: #F0F2F5;
+$backgroundColor: #f0f2f5;
 
 // Reset CSS
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 // Font
 @font-face {
-    font-family: "logofont";
-    src: url("/asset/Merienda-Regular.ttf");
+  font-family: "logofont";
+  src: url("/asset/Merienda-Regular.ttf");
 }
 @font-face {
-    font-family: "angkafont";
-    src: url("/asset/RedditMono-Regular.ttf");
+  font-family: "angkafont";
+  src: url("/asset/RedditMono-Regular.ttf");
 }
 // Global Styling
 body {
-    background-color: $backgroundColor;
-    width: 100%;
-    height: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $backgroundColor;
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 // Section Utama
 .sectionUtama {
-    background-color: #ffffff;
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid rgba(0,0,0,0.2);
-    text-align: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
 
-    .tombolUtama {
-        padding: 5px 10px;
-        color: #919599;
-        stroke: #919599;
-        fill: none;
-        font-size: 12px;
-        font-weight: 600;
-        cursor: pointer;
+  .tombolUtama {
+    width: 20%;
+    height: 100%;
+    padding-top: 10px;
+    color: #919599;
+    stroke: #919599;
+    fill: none;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
 
-        &:hover {
-            background-color: $backgroundColor;
-            border-radius: 10px;
-        }
-
-        .svgUtama {
-            width: 24px;
-        }
+    &:hover {
+      background-color: $backgroundColor;
     }
+
+    .svgUtama {
+      width: 24px;
+    }
+  }
 }
 
 .tombolUtama.warna {
-    fill: $primaryColor;
-    color: $primaryColor;
-    stroke: none;
+  fill: $primaryColor;
+  color: $primaryColor;
+  stroke: none;
 }
 
-// Wrapper Page 1 (onTab)
+// Wrapper Page Home 1 (onTab)
 .wrapperPage.onTab {
-    display: block;
+  display: block;
 }
 .wrapperPage {
+  width: 100%;
+  display: none;
+
+  // Header Home
+  .headerHome {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
     width: 100%;
-    display: none;
-
-    .contentPage {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    // Header Home
-    .headerHome {
-        width: 100%;
-        height: 40px;
-        background-color: #ffffff;
-        padding: 0 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-        .logoWeb {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-
-            a {
-                color: $primaryColor;
-                line-height: 50px;
-                text-decoration: none;
-                font-size: 1.3rem;
-                font-weight: 600;
-                font-family: "logofont";
-            }
-        }
-
-        svg {
-            border: 1.2px solid $primaryColor;
-            border-radius: 50%;
-        }
-
-        .saldoKantor {
-            height: 40px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-
-            .judulSaldo {
-                background-color: $primaryColor;
-                border-radius: 50%;
-                width: 18px;
-                height: 18px;
-
-                svg {
-                    fill: #fff;
-                }
-            }
-            .angkaSaldo {
-                cursor: pointer;
-
-                p {
-                    color: $secondaryColor;
-                    font-family: "angkafont";
-                    font-size: 16px;
-                    font-weight: 600;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-    // Home Page
-    .homePage {
-        background-color: #ffffff;
-        width: 100%;
-        height: 200px;
-        padding: 0 10px;
-        background-image: url("/asset/homesvg.svg");
-        background-size: cover;
-        position: sticky;
-        top: 0;
-
-        .kotakHome {
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .absensi {
-                background-color: #fff;
-                cursor: pointer;
-                padding: 3px 5px;
-                border: 1px solid $secondaryColor;
-                border-radius: 5px;
-                display: flex;
-                align-items: center;
-                gap: 3px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-                p {
-                    color: #1877f2;
-                    font-size: 10px;
-                    font-weight: 600;
-                }
-            }
-            .karyawan {
-                background-color: #fff;
-                cursor: pointer;
-                padding: 3px 5px;
-                border: 1px solid $secondaryColor;
-                border-radius: 5px;
-                display: flex;
-                align-items: center;
-                gap: 3px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-                p {
-                    color: #1877f2;
-                    font-size: 10px;
-                    font-weight: 600;
-                }
-            }
-            .teman {
-                background-color: #fff;
-                cursor: pointer;
-                padding: 3px 5px;
-                border: 1px solid $secondaryColor;
-                border-radius: 5px;
-                display: flex;
-                align-items: center;
-                gap: 3px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-                p {
-                    color: #1877f2;
-                    font-size: 10px;
-                    font-weight: 600;
-                }
-            }
-        }
-    }
-    // Header Ruangkerja
-    .headerRuangkerja {
-        width: 100%;
-        height: 35px;
-        padding: 0 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .judul {
-            p {
-                font-size: 18px;
-                font-weight: 500;
-            }
-        }
-
-        .iconRuangkerja {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-    }
-    // Container Menu
-    .containerMenu {
-        width: 90%;
-        margin: 10px auto;
-        border: 1px solid $secondaryColor;
-        border-radius: 20px;
-        background-color: #ffffff;
-        height: 32px;
-        line-height: 20px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: sticky;
-        top: 0;
-
-        .tombolMenu {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 100%;
-            width: 25%;
-            font-size: 12px;
-            font-weight: 600;
-            border-radius: 20px;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            &:hover {
-                background-color: $backgroundColor;
-                transition: all 0.2s ease;
-                border-radius: 20px;
-            }
-        }
-
-        .tombolMenu.onSlide {
-            color: #ffffff;
-            background-color: $secondaryColor;
-        }
-    }
-
-}
-
-// Content Menu Page
-.contentMenuPage {
-    background-color: #1877f2;
-}
-
-// Content Menu Page drop 
-.menuDrop {
+    height: 40px;
     padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .leftHeader {
+      display: flex;
+      align-items: center;
+
+      a {
+        cursor: pointer;
+        color: $primaryColor;
+        line-height: 40px;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: "logofont";
+      }
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+        border: 1.2px solid $primaryColor;
+        border-radius: 50%;
+      }
+    }
+
+    .rightHeader {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .svgHeader {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  .navHome {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 40px;
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 3px;
+
+    .leftNav {
+      width: 60%;
+      margin-top: 5px;
+      height: 20px;
+      border: 1px solid #050505;
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+      border-radius: 10px;
+
+      a {
+        height: 19px;
+        padding: 0 10px;
+        border-radius: 10px;
+        color: #050505;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 19px;
+      }
+      a.navigate {
+        background-color: #050505;
+        color: #ffffff;
+      }
+    }
+    .rightNav {
+      height: 20px;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      overflow: hidden;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        border: 1px solid purple;
+        fill: purple;
+        border-radius: 50%;
+      }
+
+      p {
+        width: 80%;
+        color: purple;
+        font-family: "angkafont";
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// Header Ruangkerja
+.headerArea {
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .judul {
+    p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  .iconRuangkerja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+// Container Menu
+.containerMenu {
+  background-color: #ffffff;
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid $secondaryColor;
+  border-radius: 20px;
+  height: 30px;
+  line-height: 30px;
+
+  .tombolMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      color: $secondaryColor;
+      width: 25%;
+      height: 29px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 20px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+  }
+
+  .tombolMenu a.onSlide {
+    color: #ffffff;
+    background-color: $secondaryColor;
+  }
+}
+
+// Content Menu Page drop
+.menuDrop {
+  padding: 10px;
+  text-align: center;
 }
 
 .menuDrop p {
-    font-size: 11px;
-    text-align: center;
-    font-weight: 600;
-    color: #919599;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 600;
+  color: #919599;
 }
 
 .menuDrop .form {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
 .menuDrop .form input {
-    padding: 13px 10px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    text-transform: capitalize;
+  padding: 13px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
 }
 
 .menuDrop .form #button {
-    padding: 10px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    background-color: $primaryColor;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: $primaryColor;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .contentHeader4 {
-    width: 100%;
-    height: 300px;
-    background-image: url(/asset/ivan.jpg);
-    background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url(/asset/ivan.jpg);
+  background-size: cover;
 }
 .contentHeader5 {
-    width: 100%;
-    height: 300px;
-    background-image: url(/asset/aku.png);
-    background-size: cover;
+  width: 100%;
+  height: 300px;
+  background-image: url(/asset/aku.png);
+  background-size: cover;
+}
+
+.contentNavArea {
+  display: flex;
+  justify-content: space-around;
 }
