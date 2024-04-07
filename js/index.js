@@ -4,11 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const containersMenu = document.querySelectorAll(
     ".containerMenu .tombolMenu"
   );
-  const mains = document.querySelectorAll(".menuPage");
+  const navKiri = document.querySelectorAll(".pcoba");
 
   sectionsUtama.forEach((sectionUtama, index) => {
-    sectionUtama.addEventListener("click", (event) => {
-      event.preventDefault();
+    sectionUtama.addEventListener("click", () => {
       sectionsUtama.forEach((sectionU) => {
         sectionU.classList.remove("warna");
       });
@@ -20,17 +19,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  containersMenu.forEach((container, index) => {
-    container.addEventListener("click", (event) => {
-      event.preventDefault();
+  navKiri.forEach((navK, index) => {
+    navK.addEventListener("click", () => {
+      navKiri.forEach((nav) => {
+        nav.classList.remove("navigate");
+      });
+      navK.classList.add("navigate");
+    });
+  });
+
+  containersMenu.forEach((container) => {
+    container.addEventListener("click", () => {
       containersMenu.forEach((c) => {
         c.classList.remove("onSlide");
       });
       container.classList.add("onSlide");
-      mains.forEach((main) => {
-        main.classList.remove("aktif");
-      });
-      mains[index].classList.add("aktif");
     });
   });
+});
+
+const body = document.body;
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 0) {
+    body.classList.remove("scrollUp");
+  }
+  if (currentScroll > lastScroll && !body.classList.contains("scrollDown")) {
+    body.classList.remove("scrollUp");
+    body.classList.add("scrollDown");
+  }
+  if (currentScroll < lastScroll && body.classList.contains("scrollDown")) {
+    body.classList.remove("scrollDown");
+    body.classList.add("scrollUp");
+  }
+  lastScroll = currentScroll;
 });

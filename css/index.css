@@ -23,32 +23,39 @@ body {
 .sectionUtama {
   background-color: #ffffff;
   width: 100%;
-  height: 60px;
+  height: 50px;
   position: fixed;
-  left: 0;
   bottom: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 .sectionUtama .tombolUtama {
   width: 20%;
-  height: 100%;
-  padding-top: 10px;
-  color: #919599;
-  stroke: #919599;
+  height: 50px;
+  padding: 5px 10px;
+  color: #777777;
+  stroke: #777777;
   fill: none;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
+  transition: all 0.1s;
   cursor: pointer;
 }
 .sectionUtama .tombolUtama:hover {
-  background-color: #f0f2f5;
+  background-color: #fff4f9;
 }
 .sectionUtama .tombolUtama .svgUtama {
   width: 24px;
+}
+.sectionUtama .tombolUtama .svgUtama.svgT {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #050505;
+  fill: #ffffff;
+  stroke: none;
 }
 
 .tombolUtama.warna {
@@ -67,14 +74,16 @@ body {
 }
 .wrapperPage .headerHome {
   background-color: #ffffff;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
-  height: 40px;
+  height: 50px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 .wrapperPage .headerHome .leftHeader {
   display: flex;
@@ -83,7 +92,7 @@ body {
 .wrapperPage .headerHome .leftHeader a {
   cursor: pointer;
   color: #ff006e;
-  line-height: 40px;
+  line-height: 50px;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 600;
@@ -108,40 +117,36 @@ body {
 .wrapperPage .navHome {
   background-color: #ffffff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
-  top: 40px;
+  top: 0;
   width: 100%;
-  height: 30px;
-  padding: 0 10px;
+  height: 50px;
+  padding: 5px 10px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 3px;
 }
 .wrapperPage .navHome .leftNav {
   width: 60%;
-  margin-top: 5px;
-  height: 20px;
-  border: 1px solid #050505;
+  height: 35px;
   display: flex;
   justify-content: space-between;
-  gap: 5px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
-.wrapperPage .navHome .leftNav a {
-  height: 19px;
+.wrapperPage .navHome .leftNav .pcoba {
+  height: 35px;
   padding: 0 10px;
-  border-radius: 10px;
-  color: #050505;
+  color: #777777;
   text-decoration: none;
   font-size: 12px;
   font-weight: 600;
   text-align: center;
-  line-height: 19px;
+  line-height: 35px;
 }
-.wrapperPage .navHome .leftNav a.navigate {
-  background-color: #050505;
-  color: #ffffff;
+.wrapperPage .navHome .leftNav .pcoba.navigate {
+  border-bottom: 3px solid #050505;
+  color: #050505;
 }
 .wrapperPage .navHome .rightNav {
   height: 20px;
@@ -272,4 +277,24 @@ body {
 .contentNavArea {
   display: flex;
   justify-content: space-around;
+}
+
+.scrollDown .headerHome {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scrollUp .headerHome {
+  transition: 0;
+}
+
+.contentHome {
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.contentHome p {
+  color: #555555;
+  font-size: 12px;
+  font-family: "logofont";
+  padding: 0 10px;
 }/*# sourceMappingURL=index.css.map */
